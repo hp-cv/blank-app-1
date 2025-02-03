@@ -8,10 +8,10 @@ import sys
 
 
 def install_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install -Y", package])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "-Y", package])
 
 def uninstall_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "uninstall -Y", package])
+    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", package])
 
 # Install OpenCV
 uninstall_package('opencv-python')
