@@ -3,6 +3,8 @@ import zipfile
 import streamlit as st
 from PIL import Image
 import gdown
+import subprocess
+
 
 def install_package(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
