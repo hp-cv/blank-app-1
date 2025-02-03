@@ -1,3 +1,4 @@
+opencv-python-headless
 streamlit
 gdown==5.2.0
 ultralytics==8.3.70
