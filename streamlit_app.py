@@ -4,6 +4,7 @@ import streamlit as st
 from PIL import Image
 import gdown
 import subprocess
+import sys
 
 
 def install_package(package):
