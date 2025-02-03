@@ -2,10 +2,20 @@ import os
 import zipfile
 import streamlit as st
 from PIL import Image
-from ultralytics import YOLO
 import gdown
 
+def install_package(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
+def uninstall_package(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", package])
+
+# Install OpenCV
+uninstall_package('opencv-python')
+uninstall_package('opencv-contrib-python')
+install_package('opencv-python-headless')
+
+from ultralytics import YOLO
 
 def download_and_unzip(url: str, output_dir: str) -> None:
     """
