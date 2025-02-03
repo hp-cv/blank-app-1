@@ -11,7 +11,7 @@ def install_package(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", "-Y", package])
 
 def uninstall_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "uninstall","-Y", package])
+    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", package])
 
 # Install OpenCV
 if not os.path.exists("yolo11x-seg-best.pt"):
