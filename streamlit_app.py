@@ -7,17 +7,17 @@ import subprocess
 import sys
 
 
-def install_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "-Y", package])
+# def install_package(package):
+#     subprocess.check_call([sys.executable, "-m", "pip", "install", "-Y", package])
 
-def uninstall_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "uninstall", package,"-y"])
+# def uninstall_package(package):
+#     subprocess.check_call([sys.executable, "-m", "pip", "uninstall", package,"-y"])
 
-# Install OpenCV
-if not os.path.exists("yolo11x-seg-best.pt"):
-    uninstall_package('opencv-python')
-    uninstall_package('opencv-contrib-python')
-    install_package('opencv-python-headless')
+# # Install OpenCV
+# if not os.path.exists("yolo11x-seg-best.pt"):
+#     uninstall_package('opencv-python')
+#     uninstall_package('opencv-contrib-python')
+#     install_package('opencv-python-headless')
 
 from ultralytics import YOLO
 
